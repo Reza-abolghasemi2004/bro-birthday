@@ -1,0 +1,27 @@
+@keyframes reveal { from { opacity: 0; transform: translateY(18px); filter: blur(3px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+@keyframes artReveal { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+@keyframes float { 0%,100% { transform: translateY(0); opacity: .25; } 50% { transform: translateY(-22px); opacity: .7; } }
+@keyframes orbitBreathe { 0%,100% { opacity: .35; } 50% { opacity: .7; } }
+@keyframes drawLine { from { stroke-dashoffset: 1; opacity: .1; } to { stroke-dashoffset: 0; opacity: 1; } }
+@keyframes candleGrow { from { transform: scaleY(.02); opacity: 0; } to { transform: scaleY(1); opacity: .8; } }
+@keyframes glow { 0%,100% { opacity: .4; transform: scale(.96); } 50% { opacity: .8; transform: scale(1.04); } }
+@keyframes celebrate { 0% { opacity: 0; transform: translate(0,0) scale(.4); } 15% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--x),var(--y)) scale(0); } }
+.reveal { animation: reveal var(--entrance-duration) var(--ease-out) both; animation-delay: var(--delay,0ms); }
+.artwork { animation: artReveal 1.6s var(--ease-out) both; }
+.ambient { animation: artReveal 1.8s ease both; }
+.particle { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px #d9b56d50; animation: float var(--duration,16s) ease-in-out infinite; animation-delay: var(--delay); opacity: .4; }
+.orbit-breathe { animation: orbitBreathe 9s ease-in-out infinite; }
+.floating-symbol { animation: float 13s ease-in-out infinite; }
+.draw-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawLine 3s var(--ease-out) both; }
+.brother-path { animation-duration: 4.5s; }
+.halo { transform-origin: center; animation: glow 12s ease-in-out infinite; }
+.candle { transform-box: fill-box; transform-origin: center bottom; animation: candleGrow 1.3s var(--ease-out) both; animation-delay: var(--delay); }
+.celebration-spark { position: absolute; left: 50%; top: 44%; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; animation: celebrate 1.8s var(--ease-out) both; pointer-events: none; }
+body.motion-paused *, body.motion-paused *::before, body.motion-paused *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+body.motion-paused .draw-line { stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .draw-line { stroke-dashoffset: 0; }
+  .particle, .celebration-spark { display: none; }
+}
