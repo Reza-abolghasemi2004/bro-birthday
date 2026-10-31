@@ -1,0 +1,70 @@
+@media (min-width: 700px) {
+  .experience { padding-inline: 48px; }
+  .header-note { display: flex; }
+  .chapter-list { grid-template-columns: repeat(6,minmax(0,1fr)); }
+  .chapter-navigation { gap: 25px; }
+  .chapter-button { gap: 12px; }
+  .story { padding-block: 45px 65px; }
+  .story__art { max-width: 470px; }
+  .scene-title { font-size: 42px; }
+}
+@media (min-width: 1050px) {
+  .experience { padding-inline: 65px; }
+  .site-header { min-height: 106px; }
+  .story { grid-template-columns: 1fr 1fr; column-gap: 40px; min-height: max(630px,calc(100svh - 325px)); padding-block: 65px 75px; }
+  .story__art { grid-column: 2; grid-row: 1; max-width: 570px; }
+  .story__content { grid-column: 1; grid-row: 1; padding-left: 12px; }
+  .vertical-note { display: block; position: absolute; left: -31px; top: 50%; transform: translate(-50%,-50%) rotate(-90deg); color: var(--subtle); font-size: 7px; letter-spacing: 2.5px; white-space: nowrap; }
+  .chapter-navigation { flex-direction: row; align-items: center; gap: 45px; padding-block: 23px; }
+  .chapter-navigation__intro { width: 142px; padding-left: 25px; border-left: 1px solid var(--line); gap: 11px; }
+  .chapter-list { gap: 15px; }
+  .chapter-button { gap: 12px; }
+  .chapter-button::before { top: -24px; }
+  .keyboard-hint { display: flex; }
+  .site-footer { min-height: 79px; }
+  [data-scene="opening"] .scene-title { font-size: clamp(38px,3.3vw,49px); line-height: 1.85; }
+  [data-scene="opening"] .story-copy { font-size: 14px; }
+}
+@media (min-width: 1400px) {
+  .story { column-gap: 60px; }
+  .scene-title { font-size: 45px; }
+}
+@media (max-width: 699px) {
+  .site-header { min-height: 82px; }
+  .brand__name { font-size: 11px; letter-spacing: 2.5px; }
+  .brand__name > span { font-size: 5px; letter-spacing: 1.25px; }
+  .brand__mark { font-size: 34px; }
+  .motion-control { font-size: 10px; }
+  .story { padding-top: 5px; padding-bottom: 40px; }
+  .story__art { max-width: 330px; margin-block: -5px 6px; }
+  .art-caption__title { font-size: 8px; letter-spacing: 4px; }
+  .art-caption__sub { font-size: 13px; margin-top: 5px; }
+  .eyebrow { margin-bottom: 19px; font-size: 8px; letter-spacing: 2.5px; }
+  .scene-pretitle { font-size: 12px; margin-bottom: 9px; }
+  .scene-title { font-size: clamp(27px,7.6vw,38px); }
+  .story-copy { font-size: 13px; line-height: 2.6; margin-top: 17px; }
+  .scene-rule { margin-block: 22px 17px; }
+  .scene-actions { gap: 20px; margin-top: 26px; }
+  .button { min-height: 50px; padding-inline: 22px; font-size: 12px; }
+  .button--text { padding-inline: 0; }
+  .chapter-navigation { gap: 18px; padding-block: 23px 15px; }
+  .chapter-navigation__intro { flex-direction: row; align-items: center; justify-content: space-between; font-size: 11px; }
+  .chapter-button::before { top: -4px; }
+  .chapter-names { font-size: 10px; }
+  .chapter-names small { font-size: 11px; }
+  .chapter-number { font-size: 18px; }
+  .chapter-count { font-size: 9px; }
+  .site-footer { flex-direction: column; justify-content: center; gap: 11px; padding-block: 25px; }
+  .particle:nth-child(n+9) { display: none; }
+  [data-scene="forex"] .floating-symbol.distant { display: none; }
+  [data-scene="brothers"] .story__art, [data-scene="family"] .story__art { max-width: 260px; }
+  .final-note { font-size: 14px; }
+}
+@media (max-width: 370px) {
+  .experience { padding-inline: 20px; }
+  .motion-control > span { display: none; }
+  .story__art { max-width: 270px; }
+  .scene-title { font-size: 27px; }
+  .chapter-list { gap: 8px; }
+  .chapter-button { gap: 7px; }
+}

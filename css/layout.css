@@ -1,0 +1,14 @@
+.experience { width: min(100%, var(--page-width)); margin-inline: auto; padding: 0 28px; position: relative; }
+.site-header { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
+.story { position: relative; display: grid; grid-template-columns: 1fr; align-items: center; padding-block: 35px 50px; min-height: 640px; isolation: isolate; }
+.story__art { position: relative; min-width: 0; width: 100%; max-width: 570px; margin-inline: auto; grid-row: 1; }
+.story__content { position: relative; z-index: 2; width: 100%; max-width: 600px; margin-inline: auto; }
+.vertical-note { display: none; }
+.chapter-navigation { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 24px; display: flex; flex-direction: column; gap: 24px; }
+.chapter-navigation__intro { display: flex; flex-direction: column; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--muted); }
+.chapter-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; flex: 1; }
+.site-footer { min-height: 90px; padding-block: 25px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.ambient { pointer-events: none; position: fixed; inset: 0; overflow: hidden; z-index: -1; background: var(--background); }
+.ambient__glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 25% 45%,rgba(var(--glow-rgb),.065),transparent 50%),radial-gradient(ellipse at 82% 20%,#151d324d,transparent 55%); transition: background 1.5s; }
+.ambient__grain { position: absolute; inset: 0; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.7' d='M0 0h180v180H0z'/%3E%3C/svg%3E"); }
+.particles { position: absolute; inset: 0; }

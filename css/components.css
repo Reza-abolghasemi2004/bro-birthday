@@ -1,0 +1,84 @@
+.brand { display: flex; gap: 15px; align-items: center; }
+.brand__mark { position: relative; font-family: var(--font-display); color: var(--gold); font-size: 39px; line-height: 1; padding-right: 15px; border-right: 1px solid var(--line); letter-spacing: -3px; }
+.brand__spark { position: absolute; top: -4px; right: 11px; font-family: serif; font-size: 10px; }
+.brand__name { font-size: 13px; font-weight: 500; letter-spacing: 3px; }
+.brand__name > span { display: block; font-size: 6px; letter-spacing: 1.65px; color: var(--subtle); margin-top: 7px; }
+.header-note { display: none; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; }
+.status-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 12px #d9b56d66; }
+.motion-control { background: transparent; border: none; display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 11px; padding: 10px 0; min-height: 44px; }
+.motion-control svg { width: 19px; }
+.motion-control:hover { color: var(--soft-gold); }
+.tiny-label { font-size: 9px; font-weight: 400; letter-spacing: 2.7px; color: var(--gold); }
+.eyebrow { display: flex; align-items: center; gap: 12px; color: var(--accent); font-size: 10px; letter-spacing: 3px; font-weight: 400; margin-bottom: 28px; }
+.eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--accent); opacity: .7; }
+.scene-pretitle { color: #b5b3b7; font-size: 14px; line-height: 2; margin-bottom: 18px; }
+.scene-title { font-weight: 400; font-size: clamp(29px,4vw,45px); line-height: 1.8; letter-spacing: -.9px; }
+.scene-title em { color: var(--accent); font-style: normal; font-weight: 450; }
+.scene-title .title-line { display: block; }
+.story-copy { margin-top: 20px; max-width: 540px; color: #a8a8b2; font-size: 14px; font-weight: 300; line-height: 2.65; }
+.story-copy p + p { margin-top: 12px; }
+.story-copy strong { color: var(--soft-gold); font-weight: 450; }
+.story-copy .bond-quote { font-size: clamp(21px,2.2vw,29px); color: var(--gold); font-weight: 450; margin-block: 16px; }
+.scene-rule { width: 42px; height: 1px; background: var(--accent); opacity: .5; margin-block: 26px 21px; }
+.scene-aside { font-size: 10px; color: var(--subtle); line-height: 2; display: flex; align-items: center; gap: 9px; }
+.scene-aside svg { width: 13px; color: var(--gold); }
+.scene-actions { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; margin-top: 33px; }
+.button { min-height: 51px; padding: 12px 26px; border: 1px solid var(--gold); border-radius: 3px; display: inline-flex; align-items: center; justify-content: center; gap: 32px; font-size: 13px; font-weight: 450; transition: background .25s, box-shadow .25s, transform .25s; }
+.button--primary { background: var(--gold); color: #171610; box-shadow: 0 4px 30px #d9b56d0d; }
+.button--primary:hover { background: var(--soft-gold); transform: translateY(-2px); box-shadow: 0 6px 30px #d9b56d1c; }
+.button svg { width: 21px; }
+.button--text { color: var(--muted); padding-inline: 0; background: none; border-color: transparent; gap: 10px; font-weight: 300; }
+.button--text:hover { color: var(--white); }
+.button--outline { background: transparent; color: var(--gold); border-color: var(--line); gap: 15px; }
+.button--outline:hover { border-color: var(--gold); background: #d9b56d08; }
+.action-caption { color: var(--subtle); font-size: 10px; }
+.chapter-button { width: 100%; min-height: 64px; background: transparent; border: 0; color: var(--subtle); text-align: right; position: relative; padding: 10px 0; display: flex; align-items: start; gap: 10px; transition: color .3s; }
+.chapter-button::before { position: absolute; content: ''; height: 1px; top: -25px; right: 0; width: 0; background: var(--gold); transition: width .6s; }
+.chapter-button:hover { color: var(--white); }
+.chapter-button[aria-current="step"] { color: var(--soft-gold); }
+.chapter-button[aria-current="step"]::before { width: 85%; }
+.chapter-button.is-visited .chapter-number { color: var(--gold); }
+.chapter-number { font-family: var(--font-display); font-size: 21px; line-height: 1.4; color: #777b89; }
+.chapter-names { display: flex; flex-direction: column; gap: 6px; font-size: 11px; white-space: nowrap; }
+.chapter-names small { font-family: var(--font-display); font-size: 12px; letter-spacing: .6px; color: var(--subtle); }
+.site-footer > p { font-size: 8px; letter-spacing: 1.4px; color: var(--subtle); }
+.site-footer > p span { color: #a6a299; }
+.keyboard-hint { display: none; align-items: center; gap: 5px; color: var(--subtle); font-size: 9px; }
+.keyboard-hint > span { margin-left: 9px; }
+kbd { font-family: sans-serif; border: 1px solid #ffffff15; width: 19px; height: 19px; text-align: center; line-height: 17px; border-radius: 3px; font-size: 11px; }
+.footer-signature { font-size: 9px; color: var(--subtle); display: flex; align-items: center; gap: 7px; }
+.footer-signature > span { color: var(--gold); font-size: 16px; }
+.artwork { direction: ltr; width: 100%; aspect-ratio: 1.05; overflow: visible; color: var(--accent); }
+.art-caption { position: absolute; bottom: 13%; left: 50%; transform: translateX(-50%); white-space: nowrap; text-align: center; }
+.art-caption__title { font-size: 10px; font-weight: 400; letter-spacing: 5px; color: var(--gold); }
+.art-caption__sub { font-family: var(--font-display); font-size: 16px; letter-spacing: 1px; color: #b2a58c; margin-top: 10px; }
+.orbit-label { font-family: var(--font-fa); font-size: 8px; letter-spacing: 3px; fill: #a99979; }
+.art-number { font-family: var(--font-display); font-weight: 300; font-size: 315px; letter-spacing: -25px; fill: url(#number-gold); }
+.art-number-shadow { font-family: var(--font-display); font-size: 340px; letter-spacing: -25px; fill: none; stroke: var(--gold); stroke-width: .5; opacity: .09; }
+.art-star { fill: var(--soft-gold); }
+.forex-label { font-family: var(--font-fa); font-size: 11px; fill: #87a99e; letter-spacing: 2px; }
+.forex-disclaimer { text-align: center; position: absolute; bottom: 11%; width: 100%; font-size: 9px; color: var(--subtle); }
+.art-scene-label { position: absolute; bottom: 10%; width: 100%; text-align: center; font-family: var(--font-display); font-size: 17px; letter-spacing: 3px; color: var(--accent); opacity: .7; }
+.chapter-count { font-size: 10px; color: var(--subtle); margin-right: auto; font-weight: 300; letter-spacing: 1px; }
+.smile-message { position: fixed; bottom: 28px; left: 50%; transform: translate(-50%,25px); width: max-content; max-width: calc(100% - 36px); border: 1px solid #d9b56d40; background: #141821f5; color: var(--soft-gold); padding: 16px 24px; font-size: 13px; text-align: center; border-radius: 5px; z-index: 10; opacity: 0; pointer-events: none; transition: transform .5s, opacity .5s; box-shadow: 0 10px 60px #0008; }
+.smile-message.is-visible { opacity: 1; transform: translate(-50%,0); }
+.final-heart { color: var(--rose); display: inline-block; font-size: .7em; vertical-align: middle; margin-inline-start: 8px; }
+.final-note { color: var(--gold); font-size: 16px; margin-top: 14px; }
+[data-scene="family"] .particle:nth-child(n+6) { display: none; }
+[data-scene="brothers"] .particle { animation-duration: 35s; }
+/* The closing frame deliberately removes decorative art and ambient particles. */
+[data-scene="final"] .story { grid-template-columns: 1fr; min-height: calc(100svh - 200px); }
+[data-scene="final"] .story__art, [data-scene="final"] .chapter-navigation,
+[data-scene="final"] .vertical-note, [data-scene="final"] .particles { display: none; }
+[data-scene="final"] .story__content { grid-column: 1; max-width: 720px; text-align: center; padding-inline: 0; }
+[data-scene="final"] .eyebrow, [data-scene="final"] .scene-actions { justify-content: center; }
+[data-scene="final"] .eyebrow::before { display: none; }
+[data-scene="final"] .story-copy { margin-inline: auto; color: var(--muted); font-size: 16px; }
+[data-scene="final"] .scene-title { font-size: clamp(34px,4vw,53px); }
+[data-scene="final"] .scene-actions { margin-top: 38px; }
+[data-scene="final"] .celebration-spark { position: fixed; }
+.site-header { position: relative; }
+.reading-progress { position: absolute; bottom: -1px; right: 0; width: 100%; height: 1px; pointer-events: none; }
+.reading-progress > span { display: block; width: 100%; height: 100%; background: var(--gold); transform: scaleX(var(--progress,0)); transform-origin: right; transition: transform 1s var(--ease-out); box-shadow: 0 0 9px #d9b56d30; }
+/* The heading receives programmatic reading focus, not an interactive focus ring. */
+.scene-title:focus { outline: none; }

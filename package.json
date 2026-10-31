@@ -1,0 +1,16 @@
+{
+  "name": "brother-29",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A personal cinematic birthday letter. No runtime dependencies.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.56.0"
+  }
+}
